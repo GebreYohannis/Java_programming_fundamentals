@@ -1,11 +1,10 @@
 package demiscode;
 
-
-import DataTypes.DataTypes;
-
+import Expression.ReadingInput;
 public class Main {
     public static void main(String[] args){
-        DataTypes dataTypes = new DataTypes();
-        dataTypes.doOperation();
+
+        ReadingInput.doOperation();
+
     }
 }
