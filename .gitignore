@@ -1,0 +1,4 @@
+out/*
+.idea/*
+Java_Basics.iml
+*.class
