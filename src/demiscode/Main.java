@@ -1,10 +1,10 @@
 package demiscode;
 
-import ControlFlow.LogicalOperators;
+import Exercises.FizzBuzzAlgorithm;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        LogicalOperators.doOperation();
+        FizzBuzzAlgorithm.doTask();
     }
 }
