@@ -6,10 +6,11 @@ public class IFStatements {
         if(temperature > 30) {
             System.out.println("It's hot day.");
             System.out.println("Drink more water.");
-        } else if(temperature >= 20 && temperature <= 30){
-            System.out.println("It's nice day");
-        } else {
-            System.out.println("It's cold.");
         }
+        else if(temperature >= 20 && temperature <= 30)
+            System.out.println("It's nice day");
+         else 
+            System.out.println("It's cold.");
+        
     }
 }
