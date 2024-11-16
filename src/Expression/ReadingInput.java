@@ -19,7 +19,7 @@ public class ReadingInput {
         String productMangerName = scanner.nextLine();
 
         System.out.print("Name of product: ");
-        String productName = scanner.nextLine();
+        String productName = scanner.nextLine().trim();
 
         System.out.print("Price: ");
         double price = scanner.nextDouble();
@@ -28,6 +28,10 @@ public class ReadingInput {
         System.out.println(productName);
         System.out.println(NumberFormat.getCurrencyInstance().format(price));
 
+        System.out.println("Read byte value: ");
+        byte small= scanner.nextByte();
+        System.out.println(small);
+        System.out.println(scanner.nextByte());
 
     }
 }

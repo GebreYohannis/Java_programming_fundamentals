@@ -1,9 +1,10 @@
 package demiscode;
 
-import CampusExercise.ReadInput;
+import ControlFlow.LogicalOperators;
 
 public class Main {
     public static void main(String[] args){
-        ReadInput.compareTwoListOfIntegers();
+
+        LogicalOperators.doOperation();
     }
 }
