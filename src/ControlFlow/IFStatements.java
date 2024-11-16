@@ -11,5 +11,20 @@ public class IFStatements {
         } else {
             System.out.println("It's cold.");
         }
+
+        // another
+        char letterGrade = 'A';
+        if (letterGrade == 'A')
+            System.out.println("Excellent");
+        else if (letterGrade == 'B')
+            System.out.println("Good");
+        else if (letterGrade == 'C')
+            System.out.println("Not bad");
+        else if (letterGrade == 'D')
+            System.out.println("Warning");
+        else if(letterGrade == 'F')
+            System.out.println("Failed");
+        else
+            System.out.println("Grade not known");
     }
 }
