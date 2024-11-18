@@ -1,10 +1,9 @@
 package demiscode;
 
-import Exercises.FizzBuzzAlgorithm;
+import CampusExercise.LabExrciseOne.PrintOneCharcterOfStringPerLine;
 
 public class Main {
     public static void main(String[] args) {
-
-        FizzBuzzAlgorithm.doTask();
+        PrintOneCharcterOfStringPerLine.showPrintedResult();
     }
 }
