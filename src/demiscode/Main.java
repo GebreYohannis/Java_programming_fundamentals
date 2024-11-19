@@ -1,9 +1,9 @@
 package demiscode;
 
-import CampusExercise.LabExrciseOne.PrintOneCharcterOfStringPerLine;
+import CampusExercise.TestAccount;
 
 public class Main {
     public static void main(String[] args) {
-        PrintOneCharcterOfStringPerLine.showPrintedResult();
+        TestAccount.test();
     }
 }
