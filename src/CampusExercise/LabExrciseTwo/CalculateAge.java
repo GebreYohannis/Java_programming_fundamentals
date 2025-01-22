@@ -1,17 +1,27 @@
 package CampusExercise.LabExrciseTwo;
-
-import java.util.Arrays;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 
 public class CalculateAge {
-    private double birthYear;
-    private int currentYear;
+    private int birthDay, birthMonth, birthYear;
+    private int currentDay, currentMonth, currentYear;
 
-    public CalculateAge(double birthYear) {
+    public CalculateAge() {
+    }
+
+
+    public CalculateAge(int birthYear,int birthDay, int birthMonth) {
+        GregorianCalendar calendar = new GregorianCalendar();
         this.birthYear = birthYear;
-        this.currentYear = (new GregorianCalendar()).getWeekYear();
+        this.birthDay = birthDay;
+        this.birthMonth = birthMonth;
+        this.currentYear = calendar.getWeekYear();
+        this.currentDay = calendar.getFirstDayOfWeek();
+        System.out.println("Current Dat: " + currentDay);
+        int weeksInYear = calendar.getWeeksInWeekYear();
+        System.out.println("Weeks in year: " + weeksInYear);
     }
 
 
@@ -19,7 +29,7 @@ public class CalculateAge {
         return birthYear;
     }
 
-    public void setBirthYear(double birthYear) {
+    public void setBirthYear(int birthYear) {
         this.birthYear = birthYear;
     }
 
@@ -32,26 +42,17 @@ public class CalculateAge {
     public static void displayResult() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Birth year: ");
-        Double birthYear = scanner.nextDouble();
+        int birthYear = scanner.nextInt();
 
-        String stringBirthYearValue = birthYear.toString();
-        String[] values = stringBirthYearValue.split(".");
-        String newValues = Arrays.toString(values);
-        System.out.println(newValues);
-        System.out.println("BirthYear: " + stringBirthYearValue);
+        System.out.print("Birth day: ");
+        int birthDay = scanner.nextInt();
 
-        CalculateAge calculate = new CalculateAge(birthYear);
-
-        GregorianCalendar gregorianCalendar = new GregorianCalendar();
-        var weekYear = gregorianCalendar.getWeekYear();
-        System.out.println("Week Year: " + calculate.getCurrentYear());
-        var dateZone = gregorianCalendar.toZonedDateTime();
-        var year = dateZone.getYear();
-        var month = dateZone.getMonth();
-        var dayOfMonth = dateZone.getDayOfMonth();
-        System.out.println("year: " + year + ", month: " + month + ", Day: " + dayOfMonth);
-
-        System.out.println("You are " + calculate.calculateAge()+ " years old.");
+        System.out.print("Birth Month: ");
+        int birthMonth = scanner.nextInt();
+        CalculateAge calculate = new CalculateAge(birthYear,birthDay, birthMonth);
+        calculate.setBirthYear(birthYear);
+        double calculatedAge = calculate.calculateAge();
+        System.out.println("Age: " + calculatedAge);
     }
 
     public int getCurrentYear() {

@@ -19,7 +19,7 @@ public class GenerateRandomNumber {
         }
 
         int minNumber  = randomValues[0];
-        for (int i = 0; i < 5; i++) {
+        for (int i = 1; i < 5; i++) {
             if(minNumber > randomValues[i])
                 minNumber = randomValues[i];
         }

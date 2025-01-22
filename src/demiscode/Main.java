@@ -1,9 +1,11 @@
 package demiscode;
 
-import CampusExercise.LabExrciseTwo.CalculatePersonAge;
+import ControlFlow.Loops;
 
 public class Main {
+    static int  i = 1;
     public static void main(String[] args) {
-        CalculatePersonAge.calculate();
+        Loops.forEachLoop();
+
     }
 }
