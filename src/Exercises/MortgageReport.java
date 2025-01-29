@@ -1,27 +1,34 @@
 package Exercises;
-public class MortgageReport{
-static void printMortgage(
-            double principal,
-            float monthlyInterestRate,
-            short numberOfPayments) {
-        double mortgage = Exercises.MortgageCalculator.calculateMortgage(principal, monthlyInterestRate, numberOfPayments);
-        java.lang.String mortgageFormatted = java.text.NumberFormat.getCurrencyInstance().format(mortgage);
-        java.lang.System.out.println("MORTGAGE");
-        java.lang.System.out.println("-------------");
-        java.lang.System.out.println("Monthly Payment: " + mortgageFormatted);
-    }static void printPaymentSchedule(
-            double principal,
-            short numberOfPayments,
-            float monthlyInterestRate) {
-        java.lang.System.out.println("PAYMENT SCHEDULES");
-        java.lang.System.out.println("-----------------");
-        for (
-                short numberOfPaymentsMade = 1;
-                numberOfPaymentsMade <= numberOfPayments;
-                numberOfPaymentsMade++) {
-            double remainingLoan = Exercises.MortgageCalculator.calculateRemainingLoanBalance(
-                    principal, monthlyInterestRate,
-                    numberOfPayments, numberOfPaymentsMade);
-            java.lang.System.out.println(java.text.NumberFormat.getCurrencyInstance().format(remainingLoan));
-        }
-    }}
+
+import java.text.NumberFormat;
+
+public class MortgageReport {
+    private final MortgageCalculator calculator;
+    private final NumberFormat currency;
+
+    public MortgageReport(MortgageCalculator calculator) {
+        this.calculator = calculator;
+        currency = NumberFormat.getCurrencyInstance();
+    }
+
+    public void printMortgage(double mortgage) {
+        System.out.println("MORTGAGE");
+        System.out.println("-------------");
+        System.out.println("Monthly Payment: " +
+                currency.format(mortgage));
+    }
+
+    public void printPaymentSchedule(short numberOfPayments) {
+        System.out.println("PAYMENT SCHEDULES");
+        System.out.println("-----------------");
+        var loanBalances = calculator.getRemainingLoanBalance(numberOfPayments);
+        for (var loanBalance : loanBalances)
+            System.out.println(currency.format(loanBalance));
+    }
+
+    public void doReport() {
+        short numberOfPayments = calculator.getNumberOfPayments();
+        printMortgage(calculator.calculateMortgage());
+        printPaymentSchedule(numberOfPayments);
+    }
+}

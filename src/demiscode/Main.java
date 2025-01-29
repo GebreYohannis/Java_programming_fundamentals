@@ -1,11 +1,10 @@
 package demiscode;
 
-import Exercises.MortgageCalculator;
+import Exercises.TestMortgageCalculator;
 
 public class Main {
-    static int  i = 1;
     public static void main(String[] args) {
-        MortgageCalculator.doCalculate();
-
+        TestMortgageCalculator.doTest();
     }
+
 }

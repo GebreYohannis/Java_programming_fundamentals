@@ -1,17 +1,19 @@
 package Exercises;
-public class TestMortgageCalculator{
-private static void doTest() {
-        double principal = Exercises.Console.readNumber(
+
+public class TestMortgageCalculator {
+    public static void doTest() {
+        double principal = Console.readNumber(
                 "Principal($1k - $1M): ",
                 1_000, 1_000_000);
-        float annualInterestRate = (float) Exercises.Console.readNumber(
+        float annualInterestRate = (float) Console.readNumber(
                 "Annual Interest Rate:", 0, 30);
-        byte year = (byte) Exercises.Console.readNumber(
+        byte year = (byte) Console.readNumber(
                 "Period (Years): ", 1, 30);
 
-        Exercises.MortgageCalculator calculator = new Exercises.MortgageCalculator(
+        MortgageCalculator calculator = new MortgageCalculator(
                 principal, annualInterestRate, year);
-        Exercises.MortgageReport report = new Exercises.MortgageReport(calculator);
+        MortgageReport report = new MortgageReport(calculator);
 
         report.doReport();
-    }}
+    }
+}
