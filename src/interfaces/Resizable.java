@@ -1,5 +1,5 @@
 package interfaces;
 
-public interface Resiable {
+public interface Resizable {
     void resize(int size);
 }
