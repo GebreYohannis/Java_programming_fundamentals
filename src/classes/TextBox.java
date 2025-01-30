@@ -17,7 +17,16 @@ public class TextBox extends UIControl {
     }
 
     @Override
+    public void draw() {
+        System.out.println("Drawing a TextBox");
+    }
+
+    @Override
     public String toString(){
         return text;
+    }
+
+    public final void check(){
+        System.out.println("Check");
     }
 }

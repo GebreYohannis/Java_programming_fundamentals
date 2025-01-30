@@ -1,6 +1,6 @@
 package classes;
 
-public class UIControl {
+public abstract class UIControl {
     protected boolean enabled;
 
     public UIControl(boolean enabled){
@@ -18,4 +18,6 @@ public class UIControl {
     public boolean isEnabled() {
         return enabled;
     }
+
+    public abstract void draw();
 }
