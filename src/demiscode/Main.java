@@ -1,10 +1,10 @@
 package demiscode;
 
-import interfaces.mytube.TestMyTube;
+import exceptions.TestAccount;
 
 public class Main  {
     public static void main(String[] args) {
-        TestMyTube.doTest();
+        TestAccount.doTest();
     }
 }
 
