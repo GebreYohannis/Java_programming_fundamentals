@@ -1,11 +1,14 @@
 package demiscode;
 
-import exceptions.TestAccount;
+
+import generics.TestInstructor;
+import generics.TestUtils;
 
 public class Main  {
     public static void main(String[] args) {
-        TestAccount.doTest();
+        TestInstructor.test();
     }
 }
 
 
+;
