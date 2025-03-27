@@ -1,13 +1,12 @@
 package demiscode;
 
-import collections.DequeDemo;
+import lambdas.BinaryOperatorsDemo;
+import lambdas.UnaryOperatorsDemo;
 
 public class Main  {
     public static void main(String[] args) {
-        DequeDemo.show();
-
+        UnaryOperatorsDemo.show();
     }
-
 }
 
 
