@@ -1,11 +1,10 @@
 package demiscode;
 
-import lambdas.BinaryOperatorsDemo;
-import lambdas.UnaryOperatorsDemo;
+import streams.StreamsDemo;
 
 public class Main  {
     public static void main(String[] args) {
-        UnaryOperatorsDemo.show();
+        StreamsDemo.show();
     }
 }
 
