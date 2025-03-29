@@ -1,10 +1,11 @@
 package demiscode;
 
-import streams.StreamsDemo;
+import annotations.dependecyinjection.TestDependencyInjection;
+
 
 public class Main  {
     public static void main(String[] args) {
-        StreamsDemo.show();
+        TestDependencyInjection.test();
     }
 }
 
