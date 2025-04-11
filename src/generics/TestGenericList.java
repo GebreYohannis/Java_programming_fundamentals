@@ -3,7 +3,8 @@ package generics;
 public class TestGenericList {
     public static void test() {
         GenericList<Customer> users = new GenericList<Customer>();
-        users.add(new Customer());
+        users.add(new Customer("@dagmawit"));
+        users.add(new Customer("@demisgech"));
         var user = users.get(0);
 
         GenericList<Integer> intNumbers = new GenericList<>();

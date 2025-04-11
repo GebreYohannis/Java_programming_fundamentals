@@ -37,7 +37,7 @@ class TestCode {
 //        It works as we need, but it has some problem
         WeakSolutionForTheAboveProblem objectList = new WeakSolutionForTheAboveProblem();
         objectList.add(1);
-        objectList.add(new Customer());
+        objectList.add(new Customer("@demisgech"));
         objectList.add(Integer.valueOf(3));
         objectList.add(Double.valueOf(3.5));
         objectList.add(Character.valueOf('a'));
