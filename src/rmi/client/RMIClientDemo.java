@@ -10,7 +10,7 @@ public class RMIClientDemo {
             Registry registry = LocateRegistry.getRegistry("localhost",1000);
             HelloService service = (HelloService)registry.lookup("HelloService");
             System.out.println("Getting remote object...");
-            var sayHello = service.sayHello();
+            var sayHello = service.sayHello("Demis");
             System.out.println("Server response: " + sayHello);
 //            registry.unbind("HelloService");
             System.exit(0);

@@ -1,9 +1,11 @@
 package demiscode;
 
 import rmi.SimulateRMIDemo;
+import rmi.exercise1.RMIServerClientDemo;
 
 public class Main {
     public static void main(String[] args){
-        SimulateRMIDemo.simulate();
+        RMIServerClientDemo.simulate();
+//        SimulateRMIDemo.simulate();
     }
 }

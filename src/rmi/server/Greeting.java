@@ -9,7 +9,7 @@ public class Greeting extends UnicastRemoteObject implements HelloService {
     }
 
     @Override
-    public String sayHello() throws RemoteException {
-        return "Hello,RMI world!";
+    public String sayHello(String name) throws RemoteException {
+        return "Hello, " + name + "! Welcome to RMI world!";
     }
 }
