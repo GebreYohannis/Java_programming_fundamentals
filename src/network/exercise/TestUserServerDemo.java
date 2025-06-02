@@ -1,8 +1,8 @@
-package network;
+package network.exercise;
 
-public class ConnectionDemo {
+public class TestUserServerDemo {
     public static void test(){
-        new Thread(ServerSocketDemo::show).start();
+        new Thread(ServerSocketDemo::test).start();
 
         try {
             Thread.sleep(1000);
@@ -10,6 +10,6 @@ public class ConnectionDemo {
             throw new RuntimeException(e);
         }
 
-        ClientSocketDemo.show();
+        ClientSocket.test();
     }
 }

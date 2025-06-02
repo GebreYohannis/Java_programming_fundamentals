@@ -14,17 +14,17 @@ public class ServerSocketDemo {
             ServerSocket serverSocket = new ServerSocket(5000);
             System.out.println("Server is listening on port 5000");
 
-            Socket clientSocket = serverSocket.accept();
+            Socket socket = serverSocket.accept();
             System.out.println("Client connected...");
 
-            var writer = new PrintWriter(new OutputStreamWriter(clientSocket.getOutputStream()),true);
+            var writer = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()),true);
             writer.println("Server said: Hello  Client!!!");
 
-            var reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+            var reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             var line = reader.readLine();
             System.out.println("Client Message: " + line);
 
-            clientSocket.close();
+            socket.close();
             serverSocket.close();
 
         } catch (IOException e) {
